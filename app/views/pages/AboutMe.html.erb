@@ -1,2 +1,7 @@
-<h1>Pages#AboutMe</h1>
-<p>Find me in app/views/pages/AboutMe.html.erb</p>
+  <h1>Pages#info</h1>
+  <% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+<%= yield %>
+
+  <p>Find me in app/views/pages/AboutMe.html.erb</p>

@@ -1,10 +1,22 @@
 Rails.application.routes.draw do
+
+
+  get 'events/createevent'
+  get 'pages/events'
+
+  resources :userxes
   get 'pages/AboutMe'
+
 
   devise_for :users
   get 'pages/info'
+  get 'events/createevent'
 
   root :to => redirect('/ideas')
+
+  #root_path => '/'
+  #root_url => 'http://localhost:3000/'
+
   resources :ideas
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

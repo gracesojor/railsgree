@@ -1,4 +1,4 @@
 class PagesController < ApplicationController
-  def AboutMe
-  end
+  layout "Aboutstatic"
+    #...
 end

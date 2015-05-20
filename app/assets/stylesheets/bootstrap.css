@@ -3460,11 +3460,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  color: #ffffff;
+background-color: #D33162;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: none;
+  background-color: #000000;
+
 }
 .nav > li.disabled > a {
   color: #999;
@@ -3641,8 +3644,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
+  min-height: 30px;
+  margin-bottom: 1px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -3937,8 +3940,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
+/* #f8f8f8*/
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #f0ead8;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
@@ -3963,8 +3967,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #ffffff;
+  background-color: #D33162;
+  /*#e7e7e7 */
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4015,7 +4020,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #777;
+  /*color: #777; */
+
+  color: #D33162;
+
 }
 .navbar-default .navbar-link:hover {
   color: #333;
@@ -4425,8 +4433,8 @@ a.thumbnail.active {
   color: #333;
 }
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 8px;
+  margin-bottom: 7px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -4445,7 +4453,7 @@ a.thumbnail.active {
   margin-top: 5px;
 }
 .alert-dismissable {
-  padding-right: 35px;
+  padding-right: 25px;
 }
 .alert-dismissable .close {
   position: relative;
@@ -4476,7 +4484,7 @@ a.thumbnail.active {
   color: #245269;
 }
 .alert-warning {
-  color: #8a6d3b;
+  color: #ffffff;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
@@ -4488,7 +4496,7 @@ a.thumbnail.active {
 }
 .alert-danger {
   color: #a94442;
-  background-color: #f2dede;
+  background-color: #98D361;
   border-color: #ebccd1;
 }
 .alert-danger hr {

@@ -31,7 +31,7 @@ html, body{
     font-size: 100%;
   	 background: #FFf;
   	 font-weight:400;
-     padding-top: 70px;
+     padding-top: 30px;
 }
 body a{
 	transition:0.5s all;
@@ -127,9 +127,9 @@ ul.usefull-for li a.u-windows span{
 ul.usefull-for li a.u-windows span:hover{
 	background-position: -146px -35px;
 }
-/*----- top-grids -----*/
+/*----- top-grids -#98D361 green----*/
 .top-grids{
-	background:#98D361;
+	background:#D33162;
 	padding:3.2em 0 5em;
 }
 .top-grids-head h3{
@@ -176,10 +176,10 @@ ul.usefull-for li a.u-windows span:hover{
 .top-grids-box{
 	margin-top:4em;
 }
-/*----- features-----*/
+/*----- features--#F8F8F9---*/
 .fea-grids {
 	padding: 5em 0 4em;
-	background:#F8F8F9;
+	background:#f0ead8;
 }
 .fea-grids-left h3{
 	color: #727272;
@@ -273,16 +273,17 @@ ul.usefull-for li a.u-windows span:hover{
 .testmonial-head {
 	margin-bottom: 4em;
 }
-/*---- notify----*/
+/*---- notify--F3F5F5--*/
 .notify{
-	background: #F3F5F5;
+	background: #f0ead8;
 	padding: 4em 0 5em;
 }
 .notify-grid{
 	text-align:center;
 }
 .notify-grid h3{
-	color:#8C9494;
+	color:#D33162;
+  /*#8C94948*/
 	font-size:2em;
 	font-weight:400;
 }
@@ -874,7 +875,8 @@ ul.usefull-for li a.u-windows span:hover{
 	}
 	.fea-grids {
 		padding: 2em 0 1em;
-		background: #F8F8F9;
+		background: #f0ead8;
+    /*#F8F8F9*/
 	}
 	.fea-grids-left-grid-right h4 {
 		font-size: 1.2em;

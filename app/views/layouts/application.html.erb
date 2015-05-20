@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Railsfree</title>
+  <title>Vamos! Great Sta. Cruz Island Community Website</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
 
@@ -30,6 +30,14 @@
 		</script>
 		 <!---- start-smoth-scrolling---->
 
+     <div id="fb-root"></div>
+     <script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=641985282487174";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));</script>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -49,15 +57,21 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand">YourContacts Version 1.0!</a>
-          <a class="navbar-brand" href="/">The Idea app</a>
+          <a class="navbar-brand">Great Santa Cruz Island</a>
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="/ideas">Home</a></li>
+            </ul>
+          <a class="navbar-brand" href="/pages/AboutMe">About</a>
+          <a class="navbar-brand" href="/pages/AboutMe">Testimonials</a>
+
+          <!---- <a class="navbar-brand" href="/pages/AboutMe">ViewList</a>
+          <a class="navbar-brand" href="/events/createevent">Create Event</a>
+          ---->
+
+
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/ideas">Ideas</a></li>
-          </ul>
-
-          <p class="navbar-text pull-right">
+                      <p class="navbar-text pull-right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -68,8 +82,297 @@
 <% end %>
 
         </div>
+
       </div>
     </nav>
+
+    <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+
+
+        <!----- start-slider---->
+    			<!----start-slider-script---->
+    			<script src="js/responsiveslides.min.js"></script>
+    			 <script>
+    			    // You can also use "$(window).load(function() {"
+    			    $(function () {
+    			      // Slideshow 4
+    			      $("#slider4").responsiveSlides({
+    			        auto: true,
+    			        pager: true,
+    			        nav: true,
+    			        speed: 500,
+    			        namespace: "callbacks",
+    			        before: function () {
+    			          $('.events').append("<li>before event fired.</li>");
+    			        },
+    			        after: function () {
+    			          $('.events').append("<li>after event fired.</li>");
+    			        }
+    			      });
+
+    			    });
+    			  </script>
+    			<!----//End-slider-script---->
+    			<!-- Slideshow 4 -->
+    			    <div  id="top" class="callbacks_container">
+                                <ul class="rslides" id="slider4">
+
+
+
+
+                                  <li>
+    			          <img src="/uploads/images/slide5.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Amazing <span>Pink Coralline Sand</span></h1>
+    			          		<h2>One of the 7 Pink Beaches in the world.</h2>
+
+    			          		<div class="clearfix"> </div>
+    			          		<div class="big-btns">
+			          			         <a class="view" href="#"><label> </label>View Gallery</a>
+
+    			          		</div>
+    			          	</div>
+    			          </div>
+    			        </li>
+
+                  <li>
+    			          <img src="/uploads/images/slide4.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Vamos! <span>Great Sta. Cruz Island</span></h1>
+    			          		<h2>One of the 7 Pink Beaches in the world.</h2>
+                        <h2>The island is here to stay.</h2>
+
+    			          		<div class="clearfix"> </div>
+    			          		<div class="big-btns">
+
+    			          			<a class="view" href="#"><label> </label>View Gallery</a>
+
+    			          		</div>
+    			          	</div>
+    			          </div>
+    			        </li>
+                  <li>
+                    <img src="/uploads/images/slide4.jpg" alt="">
+                    <div class="caption text-center">
+                      <div class="slide-text-info">
+                        <h1>Vamos! <span>Great Sta. Cruz Island</span></h1>
+                        <h2>Welcome to GreatStaCruzIsland.com, a website created to give locals
+and visitors access to information on how best to enjoy your tour and stay.</h2>
+
+                        <div class="clearfix"> </div>
+                        <div class="big-btns">
+
+                          <a class="view" href="#"><label> </label>View Gallery</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="/uploads/images/slide4.jpg" alt="">
+                    <div class="caption text-center">
+                      <div class="slide-text-info">
+                        <h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+                        <h2>The Island is here to stay.</h2>
+
+                        <div class="clearfix"> </div>
+                        <div class="big-btns">
+
+                          <a class="view" href="#"><label> </label>View Gallery</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="/uploads/images/slide4.jpg" alt="">
+                    <div class="caption text-center">
+                      <div class="slide-text-info">
+                        <h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+                        <h2>One of the 7 Pink Beaches in the world.</h2>
+                        <div class="slide-text">
+                          <ul>
+                            <li><span> </span>The Island is here to stay. </li>
+                            <li><span> </span>More text here</li>
+                            <li><span> </span>Write more here.</li>
+                          </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="big-btns">
+
+                          <a class="view" href="#"><label> </label>View Gallery</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+    			        <li>
+    			          <img src="/uploads/images/slide4.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>All it takes is<span>One Click</span></h1>
+    			          		<h2>Click to get a feel of the island remotely.</h2>
+
+    			          		<div class="clearfix"> </div>
+    			          		<div class="big-btns">
+
+    			          			<a class="view" href="#"><label> </label>View Gallery</a>
+    			          		</div>
+    			          	</div>
+    			          </div>
+    			        </li>
+    			        <li>
+    			          <img src="/uploads/images/slide1.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Your solace. </h1>
+    			          		<h2>Your piece of heaven. A great place to unwind and relax any given day.</h2>
+
+    			          		<div class="clearfix"> </div>
+    			          		<div class="big-btns">
+    			          			<a class="hotels" href="#"><label> </label>Find Hotels Nearby</a>
+    			          			<a class="view" href="#"><label> </label>View Gallery</a>
+    			          		</div>
+    			          	</div>
+    			          </div>
+    			        </li>
+    			        <li>
+    			          <img src="/uploads/images/slide2.jpg" alt="">
+    			           <div class="caption text-center">
+    			           <div class="slide-text-info">
+    			          		<h1>Early Pink Islanders wearing<span>Life Jackets</span></h1>
+    			          		<h2>Wearing life jackets before boating is a must.</h2>
+                        <h2>Your safety is a priority. </h2>
+
+
+    			          		<div class="clearfix"> </div>
+    			          		<div class="big-btns">
+    			          				<a class="hotels" href="#"><label> </label>Find Hotels Nearby</a>
+    			          				<a class="view" href="#"><label> </label>View Gallery</a>
+    			          		</div>
+    			          	</div>
+    			          </div>
+    			        </li>
+
+                  <li>
+    			          <img src="/uploads/images/slide3.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+    			          		<h2>One of the 7 Pink Beaches in the world.</h2>
+    			          		<div class="slide-text">
+    			          			<ul>
+    			          				<li><span> </span>The Island is here to stay. </li>
+    			          				<li><span> </span>More text here</li>
+    			          				<li><span> </span>Write more here.</li>
+    			          			</ul>
+    			          		</div>
+    			          		<div class="clearfix"> </div>
+    			          		<div class="big-btns">
+
+    			          			<a class="view" href="#"><label> </label>View Gallery</a>
+    			          		</div>
+    			          	</div>
+    			          </div>
+    			        </li>
+
+
+                  <li>
+    			          <img src="/uploads/images/slide.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+    			          		<h2>One of the 7 Pink Beaches in the world.</h2>
+    			          		<div class="slide-text">
+    			          			<ul>
+    			          				<li><span> </span>The Island is here to stay. </li>
+    			          				<li><span> </span>More text here</li>
+    			          				<li><span> </span>Write more here.</li>
+    			          			</ul>
+    			          		</div>
+    			          		<div class="clearfix"> </div>
+
+    			          	</div>
+    			          </div>
+    			        </li>
+
+
+
+                  <li>
+                    <img src="/uploads/images/slide6.jpg" alt="">
+                    <div class="caption text-center">
+                      <div class="slide-text-info">
+                        <h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+                        <h2>One of the 7 Pink Beaches in the world.</h2>
+                        <div class="slide-text">
+                          <ul>
+                            <li><span> </span>The Island is here to stay. </li>
+                            <li><span> </span>More text here</li>
+                            <li><span> </span>Write more here.</li>
+                          </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+    			          <img src="/uploads/images/slide7.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+    			          		<h2>One of the 7 Pink Beaches in the world.</h2>
+    			          		<div class="slide-text">
+    			          			<ul>
+    			          				<li><span> </span>The Island is here to stay. </li>
+    			          				<li><span> </span>More text here</li>
+    			          				<li><span> </span>Write more here.</li>
+    			          			</ul>
+    			          		</div>
+    			          		<div class="clearfix"> </div>
+
+    			          	</div>
+    			          </div>
+    			        </li>
+
+                  <li>
+    			          <img src="/uploads/images/slide8.jpg" alt="">
+    			          <div class="caption text-center">
+    			          	<div class="slide-text-info">
+    			          		<h1>Welcome to <span>Great Sta. Cruz Island</span></h1>
+    			          		<h2>One of the 7 Pink Beaches in the world.</h2>
+    			          		<div class="slide-text">
+    			          			<ul>
+    			          				<li><span> </span>The Island is here to stay. </li>
+    			          				<li><span> </span>More text here</li>
+    			          				<li><span> </span>Write more here.</li>
+    			          			</ul>
+    			          		</div>
+    			          		<div class="clearfix"> </div>
+
+    			          	</div>
+    			          </div>
+    			        </li>
+
+
+
+
+
+    			      </ul>
+    			    </div>
+    			    <div class="clearfix"> </div>
+
+
+
+
+
+    			<!----- //End-slider---->
+
+
+
 
 
 
@@ -113,23 +416,10 @@
     				</div>
     				</div>
     				<div class="col-md-7 header-right">
-    					<p>YourContacts Version 1.0!</p>
 
-              <div class="container">
 
-                <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-                <%= yield %>
-              </div>
 
-    					<ul class="big-btns">
-    						<li><a class="btn-g" href="#">New Idea</a></li>
 
-    					</ul>
     					<ul class="usefull-for">
     						<li><a class="u-apple" href="#"><span> </span></a></li>
     						<li><a class="u-and"href="#"><span> </span></a></li>
@@ -145,23 +435,23 @@
     				<div class="container">
     					<div class="top-grids-head text-center">
     						<h3>Get everyone in!</h3>
-    						<p>Your contacts are valuable. Get everyone in ONE list.</p>
+    						<p>We value your experience in the island. Get everyone in HERE.</p>
     					</div>
     					<div class="top-grids-box">
     						<div class="col-md-4  top-grid text-center">
     								<span class="t-icon1"> </span>
-    								<h4>Very Smart</h4>
-    								<p>Lorem Ipsum is simply Ipsum has been the industry's text of the printing and typesetting industry. </p>
+    								<h4>Pristine</h4>
+    								<p>Spend a day alone or with your loved ones in this pristine island. </p>
     						</div>
     						<div class="col-md-4  top-grid text-center">
     								<span class="t-icon2"> </span>
-    								<h4>Responsive</h4>
-    								<p>Lorem Ipsum is simply Ipsum has been the industry's text of the printing and typesetting industry. </p>
+    								<h4>Clear Water</h4>
+    								<p>Clear water and more text here. </p>
     						</div>
     						<div class="col-md-4  top-grid text-center">
     								<span class="t-icon3"> </span>
-    								<h4>Crisp & clear</h4>
-    								<p>Lorem Ipsum is simply Ipsum has been the industry's text of the printing and typesetting industry. </p>
+    								<h4>Beautiful Island</h4>
+    								<p>Grab some food too. </p>
     						</div>
     						<div class="clearfix"> </div>
     					</div>
@@ -200,15 +490,15 @@
     						<!--//sreen-gallery-cursual---->
     				</div>
     				<div class="col-md-6 fea-grids-left">
-    						<h3>Features availalbe with Easy perfect free app </h3>
+    						<h3>The only pink sand beach in the Philippines. </h3>
     						<div class="fea-grids-left-grids">
     							<div class="fea-grids-left-grid">
     								<div class="fea-grids-left-grid-left">
     									<span class="fea-icon1"> </span>
     								</div>
     								<div class="fea-grids-left-grid-right">
-    									<h4>Beautiful, modern design</h4>
-    									<p>Duis bibendum diam non erat facilaisis tincidunt. </p>
+    									<h4>Beautiful, Serene</h4>
+    									<p>Famous for its red coralline sand. </p>
     								</div>
     								<div class="clearfix"> </div>
     							</div>
@@ -217,8 +507,8 @@
     									<span class="fea-icon2"> </span>
     								</div>
     								<div class="fea-grids-left-grid-right">
-    									<h4>Easy to customize</h4>
-    									<p>Duis bibendum diam non erat facilaisis tincidunt. </p>
+    									<h4>Easy to go by boat</h4>
+    									<p>During daytime boating, you are treated to a handsome sight of beautiful old heritage Fort Pilar, brick orange roofs of restaurant stalls inside the Paseo Del Mar Complex and quite a bit of luscious green, century-old Acacia trees – a view that can easily inspire you ahead of the quick boat-ride. </p>
     								</div>
     								<div class="clearfix"> </div>
     							</div>
@@ -227,8 +517,8 @@
     									<span class="fea-icon3"> </span>
     								</div>
     								<div class="fea-grids-left-grid-right">
-    									<h4>Developer Friendly</h4>
-    									<p>Duis bibendum diam non erat facilaisis tincidunt. </p>
+    									<h4>Tourist Friendly</h4>
+    									<p>There's always excitement in the breezy air every morning in this part of town while others go inside the complex bringing with them their fishing tackle to join some who are fishing near the sea wall . It is strategic that the local management has decided to situate the berthing point inside the Paseo Del Mar Complex. </p>
     								</div>
     								<div class="clearfix"> </div>
     							</div>
@@ -236,11 +526,7 @@
     								<div class="fea-grids-left-grid-left">
     									<span class="fea-icon4"> </span>
     								</div>
-    								<div class="fea-grids-left-grid-right">
-    									<h4>Fully Responsive</h4>
-    									<p>Duis bibendum diam non erat facilaisis tincidunt. </p>
-    								</div>
-    								<div class="clearfix"> </div>
+    															<div class="clearfix"> </div>
     							</div>
     						</div>
     				</div>
@@ -270,7 +556,7 @@
     					                	<div class="testmonial-grids">
     					                		<div class="testmonial-head text-center">
     					                			<img src="/uploads/images/quit.png" title="name" />
-    					                			<p>"Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit Nunc velit risus, dapibus non interdum.Nunc velit risus, dapibus non"</p>
+    					                			<p>"My island experience has been superb and memorable. A gem i can bring with me through this lifetime. A story to share to the world."</p>
     					                		</div>
     					                		<div class="testmonial-row">
     					                			<div class="col-md-4 testmonial-grid">
@@ -278,8 +564,31 @@
     					                					<img src="/uploads/images/t-pic1.png" title="name" />
     					                				</div>
     					                				<div class="t-people-right">
-    					                					<h4>Wells Riley</h4>
-    					                					<span>Designer</span>
+    					                					<h4>Grace Sojor</h4>
+    					                					<span>Site Creator</span>
+    					                				</div>
+    					                				<div class="clearfix"> </div>
+    					                			</div>
+
+
+
+    					                		</div>
+    					                	</div>
+    					                </div>
+    					                <div class="item">
+    					                	<div class="testmonial-grids">
+    					                		<div class="testmonial-head text-center">
+    					                			<img src="/uploads/images/quit.png" title="name" />
+    					                			<p>"Wonderful time with friends. Perfect place to unwind and make great memories."</p>
+    					                		</div>
+    					                		<div class="testmonial-row">
+    					                			<div class="col-md-4 testmonial-grid">
+    					                				<div class="t-people-left">
+    					                					<img src="/uploads/images/t-pic1.png" title="name" />
+    					                				</div>
+    					                				<div class="t-people-right">
+    					                					<h4>Lee</h4>
+    					                					<span>Beach Bum</span>
     					                				</div>
     					                				<div class="clearfix"> </div>
     					                			</div>
@@ -288,8 +597,8 @@
     					                					<img src="/uploads/images/t-pic2.png" title="name" />
     					                				</div>
     					                				<div class="t-people-right">
-    					                					<h4>Anthony Lagoon</h4>
-    					                					<span>photographer</span>
+    					                					<h4>Glen</h4>
+    					                					<span>Beach Bum</span>
     					                				</div>
     					                				<div class="clearfix"> </div>
     					                			</div>
@@ -298,8 +607,8 @@
     					                					<img src="/uploads/images/t-pic3.png" title="name" />
     					                				</div>
     					                				<div class="t-people-right">
-    					                					<h4>Anna Yeaman</h4>
-    					                					<span>Creative Director </span>
+    					                					<h4>Satra</h4>
+    					                					<span>Beach Bum </span>
     					                				</div>
     					                				<div class="clearfix"> </div>
     					                			</div>
@@ -311,7 +620,8 @@
     					                	<div class="testmonial-grids">
     					                		<div class="testmonial-head text-center">
     					                			<img src="/uploads/images/quit.png" title="name" />
-    					                			<p>"Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit Nunc velit risus, dapibus non interdum.Nunc velit risus, dapibus non"</p>
+    					                			<p>"Your solace, your piece of heaven on earth. Incredibly awesome place to hang out.
+                                      Hop into a boat and forget about time."</p>
     					                		</div>
     					                		<div class="testmonial-row">
     					                			<div class="col-md-4 testmonial-grid">
@@ -319,8 +629,8 @@
     					                					<img src="/uploads/images/t-pic1.png" title="name" />
     					                				</div>
     					                				<div class="t-people-right">
-    					                					<h4>Wells Riley</h4>
-    					                					<span>Designer</span>
+    					                					<h4>DJ</h4>
+    					                					<span>Beach Bum</span>
     					                				</div>
     					                				<div class="clearfix"> </div>
     					                			</div>
@@ -329,8 +639,8 @@
     					                					<img src="/uploads/images/t-pic2.png" title="name" />
     					                				</div>
     					                				<div class="t-people-right">
-    					                					<h4>Anthony Lagoon</h4>
-    					                					<span>photographer</span>
+    					                					<h4>Pogz</h4>
+    					                					<span>Beach Bum</span>
     					                				</div>
     					                				<div class="clearfix"> </div>
     					                			</div>
@@ -339,49 +649,8 @@
     					                					<img src="/uploads/images/t-pic3.png" title="name" />
     					                				</div>
     					                				<div class="t-people-right">
-    					                					<h4>Anna Yeaman</h4>
-    					                					<span>Creative Director </span>
-    					                				</div>
-    					                				<div class="clearfix"> </div>
-    					                			</div>
-    					                			<div class="clearfix"> </div>
-    					                		</div>
-    					                	</div>
-    					                </div>
-    					                <div class="item">
-    					                	<div class="testmonial-grids">
-    					                		<div class="testmonial-head text-center">
-    					                			<img src="/uploads/images/quit.png" title="name" />
-    					                			<p>"Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit Nunc velit risus, dapibus non interdum.Nunc velit risus, dapibus non"</p>
-    					                		</div>
-    					                		<div class="testmonial-row">
-    					                			<div class="col-md-4 testmonial-grid">
-    					                				<div class="t-people-left">
-    					                					<img src="/uploads/images/t-pic1.png" title="name" />
-    					                				</div>
-    					                				<div class="t-people-right">
-    					                					<h4>Wells Riley</h4>
-    					                					<span>Designer</span>
-    					                				</div>
-    					                				<div class="clearfix"> </div>
-    					                			</div>
-    					                			<div class="col-md-4 testmonial-grid">
-    					                				<div class="t-people-left">
-    					                					<img src="/uploads/images/t-pic2.png" title="name" />
-    					                				</div>
-    					                				<div class="t-people-right">
-    					                					<h4>Anthony Lagoon</h4>
-    					                					<span>photographer</span>
-    					                				</div>
-    					                				<div class="clearfix"> </div>
-    					                			</div>
-    					                			<div class="col-md-4 testmonial-grid">
-    					                				<div class="t-people-left">
-    					                					<img src="/uploads/images/t-pic3.png" title="name" />
-    					                				</div>
-    					                				<div class="t-people-right">
-    					                					<h4>Anna Yeaman</h4>
-    					                					<span>Creative Director </span>
+    					                					<h4>Dhenz</h4>
+    					                					<span>Beach Bum </span>
     					                				</div>
     					                				<div class="clearfix"> </div>
     					                			</div>
@@ -400,11 +669,21 @@
     					<div class="notify-grid">
     						<img src="/uploads/images/msg-icon.png" title="mail" />
     						<h3>Get Notified of any updates!</h3>
-    						<p>Subscribe to our newsletter to be notified about new version release</p>
+    						<p>Subscribe to our newsletter to be notified about site updates and island news.</p>
     						<form>
     							<input type="text" class="text" value="Your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email address';}">
     							<input type="submit" value="Submit" />
     						</form>
+
+
+
+                <div id="fb_friends" class="box left" style="">
+                  <p class="h5">Join your friends</p>
+                  <div class="fb-page" data-href="https://www.facebook.com/ILoveStaCruzIsland" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ILoveStaCruzIsland"><a href="https://www.facebook.com/ILoveStaCruzIsland">I Love Sta. Cruz Island, Zamboanga City</a></blockquote></div></div>
+
+                </div>
+
+
     					</div>
     				</div>
     			</div>
@@ -423,10 +702,20 @@
     				<!---- footer-links ---->
     				<div class="footer-links">
     					<ul>
-    						<li><p>Brought to you by </a></p><span> </span></li>
-    						<li><a href="#"> DesignPro[24x7] </a><span> </span></li>
-                <li><a > Your All-In-One Design House </a><span> </span></li>
+    					  <li><a > About </a><span> </span></li>
+                <li><a > Terms of Use </a><span> </span></li>
+                <li><a > Support </a><span> </span></li>
+                <li><a > Contact </a><span> </span></li>
+                <li><a > Disclaimer </a><span> </span></li>
     					</ul>
+
+              <ul>
+    						<li><p>We'd really love to hear from you and your island stories so why not
+drop us an email and we'll get back to you as soon as we can. </a></p><span> </span></li>
+                <li><p>Disclaimer: Every effort has been exerted to make this website as complete, accurate and updated as possible. The author shall have neither liability nor responsibility to any person or entity with respect to any loss or damage arising from the information contained in this website. Any query or comment will be dealt with appropriate action. Last updated May 11, 2015. </a></p><span> </span></li>
+
+    					</ul>
+
     					<script type="text/javascript">
     									$(document).ready(function() {
     										/*

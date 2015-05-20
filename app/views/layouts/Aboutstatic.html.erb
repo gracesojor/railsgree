@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About This Community Website</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
+<link href="stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="javascript/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="stylesheets/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<!---//webfonts--->
+		<!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="javascripts/move-top.js"></script>
+		<script type="text/javascript" src="javascripts/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!---- start-smoth-scrolling---->
+
+     <div id="fb-root"></div>
+     <script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=641985282487174";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand">Great Santa Cruz Island</a>
+          <a class="navbar-brand" href="/ideas">Home</a>
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="/pages/AboutMe">About</a></li>
+            </ul>
+            <a class="navbar-brand" href="/pages/AboutMe">Testimonials</a>
+
+        </div>
+        <div class="collapse navbar-collapse">
+                  <p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <!----- built notify ---->
+    <div class="notify">
+      <div class="container">
+        <div class="notify-grid">
+          <h3>Built by a beach bum for the beach bums!</h3>
+          <p>We would like to bring people closer together in this island. </p>
+          <% if alert %>
+              <p class="alert alert-danger"><%= alert %></p>
+              <% end %>
+              <%= yield %>
+
+        </div>
+      </div>
+    </div>
+    <!----- Built notify ---->
+
+
+    <!---- container ---->
+    		<div class="container">
+                  <!---- header ---->
+    			          <div class="header">
+
+            <!----- testmonials ---->
+            <div class="testmonials">
+              <div class="container">
+                <script>
+                        $(document).ready(function() {
+                          $("#owl-demo2").owlCarousel({
+                            items : 1,
+                            lazyLoad : true,
+                            autoPlay : true,
+                            navigation : false,
+                            navigationText :  false,
+                            pagination : true,
+                          });
+                        });
+                        </script>
+                     <!-- //requried-jsfiles-for owl -->
+                     <!-- start content_slider -->
+                         <div id="owl-demo2" class="owl-carousel">
+                                <div class="item">
+                                  <div class="testmonial-grids">
+                                    <div class="testmonial-head text-center">
+                                      <img src="/uploads/images/quit.png" title="name" />
+                                      <p>"My island experience has been superb and memorable. A gem i can bring with me through this lifetime. A story to share to the world."</p>
+                                    </div>
+                                    <div class="testmonial-row">
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic1.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Grace Sojor</h4>
+                                          <span>Site Creator</span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+
+
+
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item">
+                                  <div class="testmonial-grids">
+                                    <div class="testmonial-head text-center">
+                                      <img src="/uploads/images/quit.png" title="name" />
+                                      <p>"Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit Nunc velit risus, dapibus non interdum.Nunc velit risus, dapibus non"</p>
+                                    </div>
+                                    <div class="testmonial-row">
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic1.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Wells Riley</h4>
+                                          <span>Designer</span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic2.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Anthony Lagoon</h4>
+                                          <span>photographer</span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic3.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Anna Yeaman</h4>
+                                          <span>Creative Director </span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+                                      <div class="clearfix"> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item">
+                                  <div class="testmonial-grids">
+                                    <div class="testmonial-head text-center">
+                                      <img src="/uploads/images/quit.png" title="name" />
+                                      <p>"Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit Nunc velit risus, dapibus non interdum.Nunc velit risus, dapibus non"</p>
+                                    </div>
+                                    <div class="testmonial-row">
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic1.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Wells Riley</h4>
+                                          <span>Designer</span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic2.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Anthony Lagoon</h4>
+                                          <span>photographer</span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+                                      <div class="col-md-4 testmonial-grid">
+                                        <div class="t-people-left">
+                                          <img src="/uploads/images/t-pic3.png" title="name" />
+                                        </div>
+                                        <div class="t-people-right">
+                                          <h4>Anna Yeaman</h4>
+                                          <span>Creative Director </span>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                      </div>
+                                      <div class="clearfix"> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                  <!--//sreen-gallery-cursual---->
+              </div>
+            </div>
+            <!----- testmonials ---->
+
+
+    				<div class="col-md-5 header-left">
+    					<!----sreen-gallery-cursual---->
+    				</div>
+    				</div>
+    				<div class="col-md-7 header-right">
+
+
+
+
+    				<div class="clearfix"> </div>
+    			</div>
+    			</div>
+    			<!----- top-grids ----->
+    			<!----- featrues-grids----->
+    			<div class="fea-grids">
+    				<div class="container">
+    				<div class="col-md-6 fea-grids-left">
+    					<script>
+    							    $(document).ready(function() {
+    							      $("#owl-demo1").owlCarousel({
+    							        items : 1,
+    							        lazyLoad : true,
+    							        autoPlay : true,
+    							        navigation : false,
+    							        navigationText :  false,
+    							        pagination : true,
+    							      });
+    							    });
+    							    </script>
+    							 <!-- //requried-jsfiles-for owl -->
+    							 <!-- start content_slider -->
+    						       <div id="owl-demo1" class="owl-carousel">
+    					                <div class="item">
+    					                	<img src="/uploads/images/device-screen.png" title="name" />
+    					                </div>
+    					                <div class="item">
+    					                	<img src="/uploads/images/device-screen.png" title="name" />
+    					                </div>
+    					                <div class="item">
+    					                	<img src="/uploads/images/device-screen.png" title="name" />
+    					                </div>
+    				              </div>
+    						<!--//sreen-gallery-cursual---->
+    				</div>
+    				<div class="col-md-6 fea-grids-left">
+    						<h3>The only pink sand beach in the Philippines. </h3>
+    						<div class="fea-grids-left-grids">
+    							<div class="fea-grids-left-grid">
+    								<div class="fea-grids-left-grid-left">
+    									<span class="fea-icon1"> </span>
+    								</div>
+    								<div class="fea-grids-left-grid-right">
+    									<h4>Beautiful, Serene</h4>
+    									<p>Famous for its red coralline sand. </p>
+    								</div>
+    								<div class="clearfix"> </div>
+    							</div>
+    							<div class="fea-grids-left-grid">
+    								<div class="fea-grids-left-grid-left">
+    									<span class="fea-icon2"> </span>
+    								</div>
+    								<div class="fea-grids-left-grid-right">
+    									<h4>Easy to go by boat</h4>
+    									<p>During daytime boating, you are treated to a handsome sight of beautiful old heritage Fort Pilar, brick orange roofs of restaurant stalls inside the Paseo Del Mar Complex and quite a bit of luscious green, century-old Acacia trees – a view that can easily inspire you ahead of the quick boat-ride. </p>
+    								</div>
+    								<div class="clearfix"> </div>
+    							</div>
+    							<div class="fea-grids-left-grid">
+    								<div class="fea-grids-left-grid-left">
+    									<span class="fea-icon3"> </span>
+    								</div>
+    								<div class="fea-grids-left-grid-right">
+    									<h4>Tourist Friendly</h4>
+    									<p>There's always excitement in the breezy air every morning in this part of town while others go inside the complex bringing with them their fishing tackle to join some who are fishing near the sea wall . It is strategic that the local management has decided to situate the berthing point inside the Paseo Del Mar Complex. </p>
+    								</div>
+    								<div class="clearfix"> </div>
+    							</div>
+    							<div class="fea-grids-left-grid">
+    								<div class="fea-grids-left-grid-left">
+    									<span class="fea-icon4"> </span>
+    								</div>
+    															<div class="clearfix"> </div>
+    							</div>
+    						</div>
+    				</div>
+    				<div class="clearfix"> </div>
+    			</div>
+    			</div>
+    			<!----- featrues-grids----->
+
+    			<!----- notify ---->
+    			<div class="notify">
+    				<div class="container">
+    					<div class="notify-grid">
+    						<img src="/uploads/images/msg-icon.png" title="mail" />
+    						<h3>Get Notified of any updates!</h3>
+    						<p>Subscribe to our newsletter to be notified about site updates and island news.</p>
+    						<form>
+    							<input type="text" class="text" value="Your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email address';}">
+    							<input type="submit" value="Submit" />
+    						</form>
+    					</div>
+    				</div>
+    			</div>
+    			<!----- notify ---->
+    			<!----- social-icons ---->
+    			<div class="social-icons">
+    				<div class="container">
+    					<ul>
+    						<li><a class="twitter" href="#"><span> </span></a></li>
+    						<li><a class="facebook" href="#"><span> </span></a></li>
+    						<li><a class="vemeo" href="#"><span> </span></a></li>
+    						<li><a class="pin" href="#"><span> </span></a></li>
+    						<div class="clearfix"> </div>
+    					</ul>
+    				</div>
+    				<!---- footer-links ---->
+    				<div class="footer-links">
+    					<ul>
+    					  <li><a > About </a><span> </span></li>
+                <li><a > Terms of Use </a><span> </span></li>
+                <li><a > Support </a><span> </span></li>
+                <li><a > Contact </a><span> </span></li>
+                <li><a > Disclaimer </a><span> </span></li>
+    					</ul>
+
+              <ul>
+    						<li><p>We'd really love to hear from you and your island stories so why not
+drop us an email and we'll get back to you as soon as we can. </a></p><span> </span></li>
+                <li><p>Disclaimer: Every effort has been exerted to make this website as complete, accurate and updated as possible. The author shall have neither liability nor responsibility to any person or entity with respect to any loss or damage arising from the information contained in this website. Any query or comment will be dealt with appropriate action. Last updated May 11, 2015. </a></p><span> </span></li>
+
+    					</ul>
+
+    					<script type="text/javascript">
+    									$(document).ready(function() {
+    										/*
+    										var defaults = {
+    								  			containerID: 'toTop', // fading element id
+    											containerHoverID: 'toTopHover', // fading element hover id
+    											scrollSpeed: 1200,
+    											easingType: 'linear'
+    								 		};
+    										*/
+
+    										$().UItoTop({ easingType: 'easeOutQuart' });
+
+    									});
+    								</script>
+    									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    				</div>
+    				<!---- footer-links ---->
+    			</div>
+    			<!----- social-icons ---->
+    		</div>
+    		<!---- container ---->
+
+
+
+</body>
+
+
+<script src="//railsgirls.com/assets/bootstrap.js"></script>
+</html>
